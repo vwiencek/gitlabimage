@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 LABEL maintainer="vwiencek@gmail.com"
 
 ENV JAVA_HOME=/root/.sdkman/candidates/java/current
@@ -10,14 +10,14 @@ RUN curl -s "https://get.sdkman.io" | bash
 
 # Install docker client
 ENV DOCKER_CHANNEL stable
-ENV DOCKER_VERSION 19.03.4
+ENV DOCKER_VERSION 19.03.12
 ENV DOCKER_API_VERSION 1.40
 RUN curl -fsSL "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" \
   | tar -xzC /usr/local/bin --strip=1 docker/docker
 
 RUN docker --version
 
-ENV GRAILS_VERSION 5.6.3
+ENV GRADLE_VERSION 6.5.1
 ENV JAVA_VERSION 12.0.2-zulu
 
 RUN \
