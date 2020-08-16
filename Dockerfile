@@ -17,7 +17,7 @@ RUN curl -fsSL "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_6
 
 RUN docker --version
 
-ENV GRADLE_VERSION 6.5.1
+ENV GRADLE_VERSION 6.6.0
 ENV JAVA_VERSION 12.0.2-zulu
 
 RUN \
