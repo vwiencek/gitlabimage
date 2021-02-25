@@ -10,8 +10,8 @@ RUN curl -s "https://get.sdkman.io" | bash
 
 # Install docker client
 ENV DOCKER_CHANNEL stable
-ENV DOCKER_VERSION 20.10.3
-ENV DOCKER_API_VERSION 1.41
+ENV DOCKER_VERSION 19.03.15
+ENV DOCKER_API_VERSION 1.40
 RUN curl -fsSL "https://download.docker.com/linux/static/${DOCKER_CHANNEL}/x86_64/docker-${DOCKER_VERSION}.tgz" \
   | tar -xzC /usr/local/bin --strip=1 docker/docker
 
